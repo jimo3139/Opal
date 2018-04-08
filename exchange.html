@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Skreens Layout Exchange Control Panel</title>
+<script src="exchange.js" language="Javascript" type="text/javascript"></script>
+</head>
+
+<body onload="showMyDevices(), currentLayout()">
+
+<div id="full_remote" style="overflow:visible; position:absolute; top:20px; left:20px; padding:0; width:750px; height:750px; border-none: 2px solid #2254A6;">
+	<form action="exchange.html" method="get">
+	<img src ="images/exchange.png" alt="exchange_background" usemap ="#fullMap">
+	<map id ="fullMap" name="fullMap">
+<!--                              lt  top size -->
+	<area shape="circle" coords ="780,220,20" onclick="remoteKeyPress(this.value = 'RIGHT')">
+	<area shape="circle" coords ="680,220,20" onclick="remoteKeyPress(this.value = 'LEFT')">
+	<area shape="circle" coords ="730,220,20" onclick="remoteKeyPress(this.value = 'SELECT')">
+	<area shape="circle" coords ="780,270,20" onclick="remoteKeyPress(this.value = 'CANCEL')">
+	<area shape="circle" coords ="730,270,20" onclick="config_unit(DISPLAY_ON)">
+	<area shape="circle" coords ="680,270,20" onclick="displayHelp()">
+<!--                             lx ty  rx  ry -->
+	<area shape="rect" coords ="670,40,795,80" onclick="remoteKeyPress(this.value = 'LAYOUTS')">
+	<area shape="rect" coords ="670,95,795,135" onclick="remoteKeyPress(this.value = 'STATUS')">
+	<area shape="rect" coords ="670,150,795,190" onclick="remoteKeyPress(this.value = 'HELP')">
+
+	<area shape="rect" coords ="670,305,795,345" onclick="remoteKeyPress(this.value = 'SWAP')">
+	<area shape="rect" coords ="670,360,795,400" onclick="remoteKeyPress(this.value = 'SAVE')">
+	<area shape="rect" coords ="670,410,795,450" onclick="remoteKeyPress(this.value = 'HOME')">
+	<area shape="rect" coords ="670,465,795,505" onclick="remoteKeyPress(this.value = 'AUDIO')">
+	<area shape="rect" coords ="670,490,795,530" onclick="remoteKeyPress(this.value = 'FOO')"> 
+
+	</map>
+	<input type="button" name="loopToggle" id="loopToggle" value="Start" onclick="startStop()" style="text-align:center; top:500px; left:250px; width:100px; height:24px; font-size:16px; color:#000000; background-color:green; position:absolute; ">
+	<textarea id = 'textArg0' style="resize:none; overflow:hidden; text-align:center; top:465px; left:515px; width:120px; height:24px; font-size:16px; color:#000000; background-color:#ffff66; position:absolute; " readonly></textarea>
+	<textarea id = 'textArg1' style="resize:none; overflow:hidden; text-align:center; top:465px; left:110px; width:400px; height:24px; font-size:16px; color:#000000; background-color:#ffff66; position:absolute; " readonly></textarea>
+	<audio id="audio" src="images/click.mp3" autostart="false" ></audio>
+</div>
+
+<div id="aOptions"></div>
+<div id="aMessage"></div>
+<div id="aInfo"></div>
+<div id="aHelp"></div> 
+
+</form>
+</body>
+</html>
+
+
+
+
+
+

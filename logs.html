@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Skreens Log file display</title>
+<script src="logs.js" language="Javascript" type="text/javascript"></script>
+</head>
+
+<body onload="showMyOptions()">
+
+<div id="full_remote" style="overflow:visible; position:absolute; top:20px; left:20px; padding:0; width:750px; height:800px; border-none: 2px solid #2254A6;">
+	<form action="logs.html" method="get">
+	<img src ="images/log_buttons.png" alt="logs_background" usemap ="#fullMap">
+	<map id ="fullMap" name="fullMap">
+<!--                              lt  top size --
+	<area shape="circle" coords ="10,10,15"  onclick="setButtons('XLOG')"		name="set_submit" class="a"/>
+	<area shape="circle" coords ="10,30,15"  onclick="setButtons('KLOG')"		name="set_submit" class="a"/>
+	<area shape="circle" coords ="10,60,15"  onclick="setButtons('TRC')"		name="set_submit" class="a"/>
+	<area shape="circle" coords ="10,90,15"  onclick="setButtons('XLOG_X')"		name="set_submit" class="a"/>
+	<area shape="circle" coords ="10,120,15" onclick="setButtons('KLOG_X')"		name="set_submit" class="a"/>
+	<area shape="circle" coords ="10,150,15" onclick="setButtons('TRC_X')"		name="set_submit" class="a"/>
+-->
+<!--                             lx ty  rx  ry -->
+	<area shape="rect" coords ="10,10,120,30" href="javascript:setButtons('KLOG')"		name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,55,120,75" href="javascript:setButtons('XLOG')"		name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,100,120,120" href="javascript:setButtons('TRC')"		name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,145,120,165" href="javascript:setButtons('KLOG_X')"	name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,190,120,210" href="javascript:setButtons('XLOG_X')"	name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,235,120,255" href="javascript:setButtons('TRC_X')"	name="set_submit" class="a"/>
+
+	<area shape="rect" coords ="10,275,120,295" href="javascript:setButtons('MODEL')"	name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,315,120,335" href="javascript:setButtons('KCONFIG')"	name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,360,120,380" href="javascript:setButtons('MONKAI')"	name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,405,120,425" href="javascript:setButtons('WIFI')"	name="set_submit" class="a"/>
+	<area shape="rect" coords ="10,450,120,470" href="javascript:setButtons('LAYOUT')"	name="set_submit" class="a"/>
+<!--  Add 45 to ty and ry to add new buttons to the bottom. -->
+	</map>
+	<audio id="audio" src="images/click.mp3" autostart="false" ></audio>
+</div>
+
+<div id="tOptions"></div> 
+<div id="xOptions"></div> 
+<div id="kOptions"></div> 
+
+<div id="mOptions"></div> 
+<div id="cOptions"></div> 
+<div id="sOptions"></div> 
+<div id="wOptions"></div> 
+
+</form>
+</body>
+</html>
